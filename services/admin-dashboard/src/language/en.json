@@ -1,0 +1,92 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "applications": "Application Management",
+    "databases": "Database Management",
+    "connections": "Connection Management",
+    "tableMappings": "Table Mappings",
+    "monitoring": "Monitoring",
+    "settings": "Settings"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "confirm": "Confirm",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Info",
+    "search": "Search",
+    "filter": "Filter",
+    "reset": "Reset",
+    "refresh": "Refresh",
+    "export": "Export",
+    "import": "Import"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "username": "Username",
+    "password": "Password",
+    "loginRequired": "Login is required",
+    "invalidCredentials": "Invalid credentials"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "overview": "Overview",
+    "statistics": "Statistics",
+    "recentActivity": "Recent Activity"
+  },
+  "applications": {
+    "title": "Application Management",
+    "addApplication": "Add Application",
+    "applicationName": "Application Name",
+    "description": "Description",
+    "status": "Status",
+    "createdAt": "Created At"
+  },
+  "databases": {
+    "title": "Database Management",
+    "addDatabase": "Add Database",
+    "databaseName": "Database Name",
+    "connectionString": "Connection String",
+    "type": "Type",
+    "host": "Host",
+    "port": "Port",
+    "username": "Username",
+    "password": "Password"
+  },
+  "connections": {
+    "title": "Connection Management",
+    "addConnection": "Add Connection",
+    "sourceDatabase": "Source Database",
+    "targetDatabase": "Target Database",
+    "connectionStatus": "Connection Status"
+  },
+  "tableMappings": {
+    "title": "Table Mappings",
+    "addMapping": "Add Mapping",
+    "sourceTable": "Source Table",
+    "targetTable": "Target Table",
+    "fieldMappings": "Field Mappings"
+  },
+  "monitoring": {
+    "title": "Monitoring",
+    "systemStatus": "System Status",
+    "performance": "Performance",
+    "logs": "Logs",
+    "alerts": "Alerts"
+  },
+  "settings": {
+    "title": "Settings",
+    "general": "General",
+    "notifications": "Notifications",
+    "security": "Security",
+    "language": "Language",
+    "theme": "Theme"
+  }
+}
