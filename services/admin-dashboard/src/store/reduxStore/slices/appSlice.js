@@ -5,7 +5,6 @@ const initialState = {
   error: null,
   notifications: [],
   theme: 'light',
-  language: 'ko',
   sidebarCollapsed: false,
 };
 
@@ -36,9 +35,6 @@ const appSlice = createSlice({
     setTheme: (state, action) => {
       state.theme = action.payload;
     },
-    setLanguage: (state, action) => {
-      state.language = action.payload;
-    },
     toggleSidebar: (state) => {
       state.sidebarCollapsed = !state.sidebarCollapsed;
     },
@@ -55,7 +51,6 @@ export const {
   addNotification,
   removeNotification,
   setTheme,
-  setLanguage,
   toggleSidebar,
   setSidebarCollapsed,
 } = appSlice.actions;

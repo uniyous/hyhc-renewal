@@ -23,11 +23,6 @@ export const selectTheme = createSelector(
   (app) => app.theme
 );
 
-export const selectLanguage = createSelector(
-  [selectApp],
-  (app) => app.language
-);
-
 export const selectSidebarCollapsed = createSelector(
   [selectApp],
   (app) => app.sidebarCollapsed
@@ -52,3 +47,6 @@ export const selectAuthError = createSelector(
   [selectAuth],
   (auth) => auth.error
 );
+
+// Re-export common selectors
+export * from './commonSelectors';

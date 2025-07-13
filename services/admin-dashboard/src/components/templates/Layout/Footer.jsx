@@ -1,7 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
 import { useIntl } from 'react-intl';
-import { FooterContainer } from './styles';
 
 const { Footer: AntFooter } = Layout;
 
@@ -10,11 +9,16 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <FooterContainer>
-      <AntFooter style={{ textAlign: 'center' }}>
-        HYHC Admin Dashboard ©{currentYear} Created by SK hynix
-      </AntFooter>
-    </FooterContainer>
+    <AntFooter
+      style={{
+        textAlign: 'center',
+        background: '#f0f2f5',
+        color: '#666',
+        fontSize: '14px',
+      }}
+    >
+      HYHC Admin Dashboard ©{currentYear} Created by SK hynix
+    </AntFooter>
   );
 };
 

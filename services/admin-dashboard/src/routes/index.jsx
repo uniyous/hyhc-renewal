@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import Layout from '../components/organisms/Layout';
+import Layout from '../components/templates/Layout';
 import LoadingSpinner from '../components/atoms/LoadingSpinner';
 import ErrorBoundary from '../components/atoms/ErrorBoundary';
 
@@ -101,6 +101,10 @@ export const router = createBrowserRouter([
       </LazyWrapper>
     ),
   },
-]);
+], {
+  future: {
+    v7_startTransition: true,
+  },
+});
 
 export default router;

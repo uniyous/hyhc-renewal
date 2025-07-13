@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react'
 import { createRequire } from 'module'
 import path from 'path'
 
@@ -8,12 +8,14 @@ const require = createRequire(import.meta.url)
 export default defineConfig({
   plugins: [
     react({
-      plugins: [
-        ['babel-plugin-styled-components', {
-          displayName: true,
-          fileName: false
-        }]
-      ]
+      babel: {
+        plugins: [
+          ['babel-plugin-styled-components', {
+            displayName: true,
+            fileName: false
+          }]
+        ]
+      }
     }),
   ],
   resolve: {
@@ -35,7 +37,7 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    host: true
+    host: '0.0.0.0'
   },
   build: {
     outDir: 'dist',

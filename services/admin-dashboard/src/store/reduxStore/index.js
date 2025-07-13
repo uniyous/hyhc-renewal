@@ -1,33 +1,29 @@
 import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import { combineReducers } from 'redux';
-import { createBrowserHistory } from 'history';
-import { connectRouter, routerMiddleware } from 'connected-react-router';
 import rootSaga from './sagas';
 import appSlice from './slices/appSlice';
 import authSlice from './slices/authSlice';
+import commonSlice from './slices/commonSlice';
 
-export const history = createBrowserHistory();
-
-const createRootReducer = (history) => combineReducers({
-  router: connectRouter(history),
+const rootReducer = combineReducers({
   app: appSlice,
   auth: authSlice,
+  common: commonSlice,
 });
 
 const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
-  reducer: createRootReducer(history),
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
       },
     })
-      .concat(sagaMiddleware)
-      .concat(routerMiddleware(history)),
-  devTools: process.env.NODE_ENV !== 'production',
+      .concat(sagaMiddleware),
+  devTools: import.meta.env.MODE !== 'production',
 });
 
 sagaMiddleware.run(rootSaga);

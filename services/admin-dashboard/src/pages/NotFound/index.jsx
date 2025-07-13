@@ -1,27 +1,44 @@
 import React from 'react';
-import { Result, Button } from 'antd';
-import { useNavigate } from 'react-router-dom';
-import { useIntl } from 'react-intl';
+import { Typography } from 'antd';
+import styled from 'styled-components';
+
+const { Title } = Typography;
+
+const PageContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px;
+  background: #f5f5f5;
+`;
+
+const PageHeader = styled.div`
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e8e8;
+`;
+
+const PageContent = styled.div`
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+`;
 
 const NotFound = () => {
-  const navigate = useNavigate();
-  const intl = useIntl();
-
-  const handleGoHome = () => {
-    navigate('/');
-  };
-
   return (
-    <Result
-      status="404"
-      title="404"
-      subTitle="Sorry, the page you visited does not exist."
-      extra={
-        <Button type="primary" onClick={handleGoHome}>
-          Back Home
-        </Button>
-      }
-    />
+    <PageContainer>
+      <PageHeader>
+        <Title level={2} style={{ margin: 0 }}>404 Not Found</Title>
+      </PageHeader>
+      <PageContent>
+        {/* 페이지 내용이 여기에 들어갑니다 */}
+        <p>페이지를 찾을 수 없습니다</p>
+      </PageContent>
+    </PageContainer>
   );
 };
 
